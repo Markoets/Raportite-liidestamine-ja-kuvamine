@@ -16,7 +16,8 @@ This is a web app to show Power BI and other reports. Using app owns data.
 ```powershell
 git clone https://github.com/MarkoTagoma/SiseveebRaportid
 ```
-* Change the principal context ip , domain, username and password in code at [Homecontroller](/Controllers/HomeController.cs) line 47.
+* Change the ip, domain, username and password in code at [Homecontroller](/Controllers/HomeController.cs) line 49.
+* Change the ip, username and password in code at [Homecontroller](/Controllers/HomeController.cs) line 129.
 
 * Fill the [appsettings.json](/appsettings.json) example below with your own data
 ```json
