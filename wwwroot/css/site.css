@@ -1,0 +1,61 @@
+.btn {
+  margin: 10px;
+}
+
+body {
+  overflow-x: hidden; 
+}
+#embed-container {
+min-height: 480px;
+height: 80vh!important;
+width: 80vw!important;
+position: absolute;
+top: 50%;
+left: 50%;
+margin-top:25px;
+-ms-transform: translateX(-50%) translateY(-50%);
+-webkit-transform: translate(-50%,-50%);
+transform: translate(-50%,-50%);
+background-image: url('/gif/loading.gif');
+background-position: center;
+background-repeat: no-repeat;
+}
+@media screen and (max-height: 660px) {
+  #embed-container {
+    margin-top:30px;
+  }
+}
+
+@media screen and (max-height: 570px) {
+  #embed-container {
+    margin-top:50px;
+  }
+}
+@media screen and (max-height: 540px) {
+  #embed-container {
+    margin-top:70px;
+  }
+}
+@media screen and (max-height: 530px) {
+  #embed-container {
+    margin-top:90px;
+  }
+}
+.container-fluid {
+  width: 120%;
+}
+
+.dropdown{
+display: contents;
+margin-bottom:20px;
+position: absolute;
+}
+.logoutForm{
+display:inline-block;
+float:right;
+margin-bottom:20px;
+}
+
+#embed-container iframe {
+  background: transparent;
+}

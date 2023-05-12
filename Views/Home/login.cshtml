@@ -1,0 +1,28 @@
+
+
+<div class = "container2">
+
+        
+<form method="post" action="@Url.Action("Raportid", "Home")">
+        <p>@ViewBag.fail</p>
+    <input placeholder="Kasutajanimi" class="input-group-text" type="text" name="username" />
+    <input placeholder="Parool" class="input-group-text" type="password" name="password" />
+    <input  class="btn btn-light btn-lg" type="submit"   value="Logi sisse" />
+</form>
+
+</div>
+
+
+<style>
+   .container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 70vh;
+}
+
+input{
+    margin:10px;
+}
+</style>

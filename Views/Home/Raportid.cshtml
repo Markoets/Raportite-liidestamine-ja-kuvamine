@@ -1,0 +1,95 @@
+@model SiseveebRaptortid.ViewModels.WorkspaceViewModel;
+
+
+
+
+<div class="dropdown ">
+  <button class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+    aria-expanded="false">
+    Vali raport
+  </button>
+  
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+
+
+    @if (@ViewBag.groups.Contains("PBI.Production"))
+    {
+         <button id="embed-button" data-report-name="PBI.Production" class="embed-button btn btn-light btn-lg">Pbi Production report</button>
+
+    }
+
+    @if (@ViewBag.groups.Contains("PBI.Management"))
+    {
+      <button class="btn btn-light btn-lg" id="/img/Kuvatommis2023-05-02134254.png" onClick="show(id)"> Png raport</button>
+    }
+
+  </ul>
+</div>
+<form class="logoutForm" method="post" action="@Url.Action("Logout", "Home")">
+  <button  class="logoutBtn btn btn-secondary btn-lg" type="submit">Logi välja</button>
+</form>
+
+
+<div class='container-fluid'>
+  <div class='row3' style="visibility: hidden;" id="row">
+    <div id="content-box" class='col-sm-10'>
+      <div id="container2">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+  <script src="https://cdn.jsdelivr.net/npm/powerbi-client@2.17.2/dist/powerbi.min.js"></script>
+  <script>
+    var reports = @Html.Raw(Model.ReportsJson)
+    var embedToken = "@Model.EmbedToken";
+  </script>
+  <script src="~/js/site.js"></script>
+
+}
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  function show(id) {
+    const parent = document.getElementById("container2");
+    if (parent.hasChildNodes()) {
+      parent.removeChild(parent.firstChild);
+    }
+    // create the child element
+    const child = document.createElement("div");
+    child.setAttribute("id", "embed-container");
+
+    // append the child element to the parent
+    parent.appendChild(child);
+
+    document.getElementById("row").style.visibility = "visible";
+    if (id.includes("http") || id.includes("pdf")) {
+      
+      const content = document.createElement('iframe');
+      content.src = id
+      content.height = "100%"
+      content.width = "100%"
+      child.append(content)
+    } else {
+      const content = document.createElement('img');
+      content.src = id
+      var offsetHeight = document.getElementById('embed-container').offsetHeight;
+      var offsetWidth = document.getElementById('embed-container').offsetWidth;
+      content.height = offsetHeight
+      content.width = offsetWidth
+      child.append(content)
+    }
+
+  } console.log("tere")
+
+$(document).ready(function () {
+    $("#dropdownMenuButton1").click();
+}); </script>
+
