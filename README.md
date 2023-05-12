@@ -65,7 +65,6 @@ dotnet run
 
 
 # Move to production reports
-* Remove the commented line in [ApiService.cs](Services/ApiService.cs) line 106 and comment out the hard coded one.
 * Make sure a capacity is assigned to the workspace.
 
 # To add more
