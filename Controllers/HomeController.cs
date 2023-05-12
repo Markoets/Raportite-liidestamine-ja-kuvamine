@@ -46,7 +46,8 @@ namespace SiseveebRaptortid.Controllers
         {
             try
             {
-                using (PrincipalContext context = new PrincipalContext(ContextType.Domain, "Domeeni IP", "Domeeni nimi", "Kasutajanimi", "Kasutaja parool"))
+                                                                                                                  //DC=test,DC=name
+                using (PrincipalContext context = new PrincipalContext(ContextType.Domain, "Domeeni IP", "Active Directory domain distinguished name (DN)", "Kasutajanimi", "Kasutaja parool"))
                 {
                     // Check if the user is authenticated
                     if (_memoryCache.Get("AuthToken") == "sees")
