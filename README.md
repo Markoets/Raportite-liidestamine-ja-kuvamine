@@ -56,7 +56,11 @@ dotnet build
 ``` 
 
 # Usage
-* To start the project run in the root directory terminal
+* First run in the root directory terminal
+```
+dotnet build
+```
+* Then run the project in the root directory terminal
 ```
 dotnet run
 ``` 
