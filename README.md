@@ -45,6 +45,7 @@ git clone https://github.com/MarkoTagoma/SiseveebRaportid
   "AllowedHosts": "*"
 }
 ```
+* To get domain go to [Azure portal](https://portal.azure.com/) go to Azure Active Directory look for the "Primary domain" and copy it.
 * To get [TenantID](https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant)
 * To get [ClientID](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#sign-in-to-the-application)
 * To get [ClientSecret](https://learn.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal#option-2-create-a-new-application-secret)
